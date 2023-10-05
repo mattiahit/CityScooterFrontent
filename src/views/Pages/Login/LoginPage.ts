@@ -7,9 +7,9 @@ export default defineComponent({
     name: "LoginComponent",
     setup() {
         const formLoginRef = ref<FormInstance>();
-        const formLogin = reactive<LoginFormModel>({
-            username: "",
-            password: ""
+        const formLogin = ref<LoginFormModel>({
+            username: '',
+            password: ''
         })
         const rules = reactive<FormRules<LoginFormModel>>({
             username: [

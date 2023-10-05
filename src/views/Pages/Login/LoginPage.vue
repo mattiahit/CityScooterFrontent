@@ -9,14 +9,12 @@
                     <img src="./../../../assets/electric-scooter.png" />
                     <h3>Login</h3>
                     <el-form
-                        ref="formLoginRef"
-                        :model="formLogin"
                         :rules="rules">
                         <el-form-item prop="username">
-                            <el-input :model="formLogin.username" placeholder="User"/>
+                            <el-input v-model="formLogin.username" placeholder="User"/>
                         </el-form-item>
                         <el-form-item prop="password">
-                            <el-input :model="formLogin.password" placeholder="Password" type="password" show-password/>
+                            <el-input v-model="formLogin.password" placeholder="Password" type="password" show-password/>
                         </el-form-item>
                         <el-form-item>
                             <el-button id="login_button" color="#50BFA5">
@@ -44,6 +42,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    #login_container {
+      padding: 30px;
     }
     #main_container img {
         width: 70%;

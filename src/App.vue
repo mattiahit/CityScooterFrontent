@@ -3,8 +3,16 @@ import LoginPage from "./views/Pages/Login/LoginPage.vue";
 </script>
 
 <template>
-  <LoginPage/>
+  <div class="center-container">
+    <LoginPage/>
+  </div>
 </template>
 
 <style scoped>
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Pełna wysokość widoku */
+}
 </style>

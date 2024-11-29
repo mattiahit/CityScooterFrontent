@@ -1,9 +1,6 @@
 <template>
     <div class="common-layout">
         <el-container id="root">
-            <el-main id="main_container">
-                <img src="./../../../assets/scooter_bg.svg" />
-            </el-main>
             <el-aside id="login_container">
                 <div id="login_form">
                     <img src="./../../../assets/electric-scooter.png" />
@@ -31,33 +28,49 @@
 <style scoped>
     .common_layout {
         position: relative;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     #root {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 95%;
-    }
-    #main_container, #login_container {
+        position: relative;
+        width: 90%;
+        max-width: 1200px;
+        height: 100%;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     #login_container {
-      padding: 30px;
-    }
-    #main_container img {
-        width: 70%;
+        padding: 40px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
     #login_form img {
-        width: 40%;
+        width: 50%;
+        margin-bottom: 20px;
     }
     #login_form {
         text-align: center;
     }
     #login_button {
-        position: absolute;
-        right: 0px;
-        margin-top: 30px;
+        width: 100%;
+        background-color: #50BFA5;
+        color: white;
+        border: none;
+        padding: 10px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #login_button:hover {
+        background-color: #3a8f7a;
     }
 </style>

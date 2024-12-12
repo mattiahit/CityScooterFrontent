@@ -6,6 +6,4 @@
         </ag-grid-vue>
     </div>
 </template>
-<script lang="ts" src="./ScooterManagementPage.ts">
-
-</script>
+<script lang="ts" src="./ScooterManagementPage.ts" />

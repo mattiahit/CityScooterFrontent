@@ -6,7 +6,9 @@
                     <img src="./../../../assets/electric-scooter.png" />
                     <h3>Login</h3>
                     <el-form
-                        :rules="rules">
+                        :model="formLogin"
+                        :rules="rules"
+                        ref="formLoginRef">
                         <el-form-item prop="username">
                             <el-input v-model="formLogin.username" placeholder="User"/>
                         </el-form-item>
@@ -14,7 +16,7 @@
                             <el-input v-model="formLogin.password" placeholder="Password" type="password" show-password/>
                         </el-form-item>
                         <el-form-item>
-                            <el-button id="login_button" color="#50BFA5">
+                            <el-button id="login_button" color="#50BFA5" @click="handleLogin">
                                 Login
                             </el-button>
                         </el-form-item>

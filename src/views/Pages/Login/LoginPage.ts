@@ -5,7 +5,7 @@ import { useRouter } from 'vue-router';
 import { ElMessage } from 'element-plus';
 
 export default defineComponent({
-    name: "LoginComponent",
+    name: "LoginPage",
     setup() {
         const router = useRouter();
         const formLoginRef = ref<FormInstance>();
@@ -31,7 +31,7 @@ export default defineComponent({
                 if (valid) {
                     const { username, password } = formLogin.value;
                     if (username === 'user' && password === 'password') {
-                        router.push({ name: 'scooter-management' });
+                        router.push({ name: 'scooter-management', replace: true });
                     } else {
                         ElMessage.error('Invalid username or password');
                     }

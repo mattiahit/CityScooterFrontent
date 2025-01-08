@@ -1,6 +1,6 @@
 import { defineComponent, ref } from "vue";
 import { AgGridVue } from 'ag-grid-vue3'
-import type { GridSizeChangedEvent } from "ag-grid-community";
+import type { GridReadyEvent, GridSizeChangedEvent } from "ag-grid-community";
 
 export default defineComponent({
   name: 'ScooterManagementPage',
@@ -17,9 +17,9 @@ export default defineComponent({
       { headerName: 'Name', field: 'name' },
       { headerName: 'Status', field: 'status' }
     ])
-    const onGridReady = (params) => {
-        gridApi.value = params.api;
-        params.api.sizeColumnsToFit()
+    const onGridReady = (params: any) => {
+      gridApi.value = params.api;
+      params.api.sizeColumnsToFit()
     }
     const onGridSizeChanged = (params: GridSizeChangedEvent) => {
       params.api.sizeColumnsToFit();
